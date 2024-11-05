@@ -1,0 +1,19 @@
+name: Detect Repository Visibility Change
+
+on:
+  # This event triggers when repository settings change, like visibility updates
+  repository:
+    types: [publicized, privatized]
+
+jobs:
+  check_visibility:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log Repository Visibility Change
+        run: |
+          echo "Repository visibility change detected"
+          if [[ "${{ github.event.action }}" == "publicized" ]]; then
+            echo "Incident: The repository has been made public"
+          elif [[ "${{ github.event.action }}" == "privatized" ]]; then
+            echo "The repository has been made private"
+          fi
