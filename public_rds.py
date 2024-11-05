@@ -1,7 +1,5 @@
-"""
-Setting a database instance to be publicly accessible increases the risk of data breaches. Here’s an example of creating a publicly accessible RDS instance.
-Setting 'PubliclyAccessible=True' makes the database available over the internet, which can expose it to unauthorized access.
-"""
+# Setting a database instance to be publicly accessible increases the risk of data breaches. Here’s an example of creating a publicly accessible RDS instance.
+# Setting 'PubliclyAccessible=True' makes the database available over the internet, which can expose it to unauthorized access.
 
 rds_client = boto3.client('rds')
 
