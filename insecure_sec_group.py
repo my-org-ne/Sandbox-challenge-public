@@ -1,3 +1,8 @@
+# In AWS, security groups act as virtual firewalls. Misconfiguring them by allowing unrestricted ingress (e.g., open to all IPs) can make your infrastructure 
+# vulnerable to attacks. Here’s an example using boto3 to create a security group with an open inbound rule.
+# Setting CidrIp: '0.0.0.0/0' means any IP address can access any port on this resource.
+
+
 import boto3
 from botocore.exceptions import ClientError
 
