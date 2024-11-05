@@ -1,3 +1,7 @@
+# Misconfigured IAM policies that grant overly broad permissions can allow unauthorized access and manipulation of resources. Here’s an example of 
+# creating a user and attaching an IAM policy that grants full administrative privileges
+# The policy allows Action: "*", which grants access to all AWS actions on all resources (Resource: "*")—a serious security risk.
+
 import boto3
 import json
 from botocore.exceptions import ClientError
